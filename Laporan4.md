@@ -71,3 +71,13 @@ di bawah ini
 11. Hasilnya
 ![alt text](<Screenshot 2024-03-10 172512.png>)
 ![alt text](<Screenshot 2024-03-10 172526.png>)
+
+# Attribute Changes
+1. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 173546.png>)
+2. Hasilnya 
+![alt text](<Screenshot 2024-03-10 173551.png>)
+3. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 174018.png>)
+4. Hasilnya 
+![alt text](<Screenshot 2024-03-10 174024.png>)
