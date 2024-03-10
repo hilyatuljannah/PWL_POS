@@ -8,20 +8,27 @@
 </head>
 <body>
     <table border="1" cellpadding="2" cellspacing="0">
-        <tr>
+        {{-- <tr>
             <th>ID</th>
             <th>Username</th>
             <th>Nama</th>
             <th>ID Level Pengguna</th>
-        </tr>
-        {{-- @foreach ($data as $d) --}}
+        </tr> --}}
+        {{-- @foreach ($users as $user)
         <tr>
-            <td>{{ $data->user_id }}</td>
-            <td>{{ $data->username }}</td>
-            <td>{{ $data->nama }}</td>
-            <td>{{ $data->level_id }}</td>
+            <td>{{ $user->user_id }}</td>
+            <td>{{ $user->username }}</td>
+            <td>{{ $user->nama }}</td>
+            <td>{{ $user->level_id }}</td>
         </tr>
-    {{-- @endforeach --}}
+    @endforeach --}}
+
+    <tr>
+        <th>Jumlah Pengguna</th>
+    </tr>
+    <tr>
+        <td>{{ $userCount }}</td>
+    </tr>
     </table>
     
 </body>
