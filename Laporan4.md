@@ -47,4 +47,27 @@ di bawah ini
 
 # Retreiving or Creating Models
 
-1.
+1. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 171055.png>)
+2. Ubah kembali file view dengan nama user.blade.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 171213.png>)
+3. Hasilnya 
+![alt text](<Screenshot 2024-03-10 171252.png>)
+4. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 171656.png>)
+5. Simpan kode program Langkah 4. Kemudian jalankan pada browser dan amati apa yang terjadi dan cek juga pada phpMyAdmin pada tabel m_user 
+![alt text](<Screenshot 2024-03-10 171641.png>)
+![alt text](<Screenshot 2024-03-10 171849.png>)
+6. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 172131.png>)
+7. Hasilnya 
+![alt text](<Screenshot 2024-03-10 172058.png>)
+8. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 172227.png>)
+9. Hasilnya
+![alt text](<Screenshot 2024-03-10 172240.png>)
+10. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-10 172505.png>)
+11. Hasilnya
+![alt text](<Screenshot 2024-03-10 172512.png>)
+![alt text](<Screenshot 2024-03-10 172526.png>)
