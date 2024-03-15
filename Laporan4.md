@@ -73,6 +73,7 @@ di bawah ini
 ![alt text](<Screenshot 2024-03-10 172526.png>)
 
 # Attribute Changes
+
 1. Ubah file controller dengan nama UserController.php dan ubah script seperti gambar di bawah ini
 ![alt text](<Screenshot 2024-03-10 173546.png>)
 2. Hasilnya 
@@ -81,3 +82,39 @@ di bawah ini
 ![alt text](<Screenshot 2024-03-10 174018.png>)
 4. Hasilnya 
 ![alt text](<Screenshot 2024-03-10 174024.png>)
+
+# Create, Read, Update, Delete (CRUD)
+
+1. Buka file view pada user.blade.php dan buat scritpnya menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-11 154853.png>)
+2. Buka file controller pada UserController.php dan buat scriptnya untuk read menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-11 154900.png>)
+3. Simpan kode program Langkah 1 dan 2. Kemudian jalankan pada browser
+![alt text](<Screenshot 2024-03-11 154913.png>)
+4. Langkah berikutnya membuat create atau tambah data user dengan cara bikin file baru pada view dengan nama user_tambah.blade.php dan buat scriptnya menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-11 162329.png>)
+5. Langkah berikutnya membuat create atau tambah data user dengan cara bikin file baru pada view dengan nama user_tambah.blade.php dan buat scriptnya menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-11 162336.png>)
+6. Hasilnya
+![alt text](<Screenshot 2024-03-11 162356.png>)
+![alt text](<Screenshot 2024-03-11 170237.png>)
+7. Langkah berikutnya membuat update atau ubah data user dengan cara bikin file baru pada view dengan nama user_ubah.blade.php dan buat scriptnya menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-12 135331.png>)
+8. Tambahkan script pada routes dengan nama file web.php. Tambahkan seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-12 135429.png>)
+9. Tambahkan script pada controller dengan nama file UserController.php. Tambahkan script dalam class dan buat method baru dengan nama ubah dan diletakan di bawah method tambah_simpan seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-12 135531.png>)
+10. Simpan kode program Langkah 11 sd 13. Kemudian jalankan pada browser dan klik link “Ubah” 
+![alt text](<Screenshot 2024-03-12 135219.png>)
+11. Tambahkan script pada routes dengan nama file web.php. Tambahkan seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-15 084058.png>)
+12. Tambahkan script pada controller dengan nama file UserController.php. Tambahkan script dalam class dan buat method baru dengan nama ubah dan uban_simpan dan diletakan di bawah method tambah_simpan seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-15 084253.png>)
+13. Hasilnya
+ ![alt text](<Screenshot 2024-03-15 084402.png>)
+14. Berikut untuk langkah delete . Tambahkan script pada routes dengan nama file web.php. Tambahkan seperti gambar di bawah ini
+![alt text](<Screenshot 2024-03-15 084625.png>)
+15. Tambahkan script pada controller dengan nama file UserController.php
+![alt text](<Screenshot 2024-03-15 084747.png>)
+16. Simpan kode program Langkah 14 dan 15. Kemudian jalankan pada browser dan klik tombol hapus.
+![alt text](<Screenshot 2024-03-15 084927.png>)
