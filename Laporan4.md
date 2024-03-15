@@ -118,3 +118,12 @@ di bawah ini
 ![alt text](<Screenshot 2024-03-15 084747.png>)
 16. Simpan kode program Langkah 14 dan 15. Kemudian jalankan pada browser dan klik tombol hapus.
 ![alt text](<Screenshot 2024-03-15 084927.png>)
+
+# Relationships
+
+1. Buka file model pada UserModel.php dan tambahkan scritpnya menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-15 085922.png>)
+2. Buka file controller pada UserController.php dan ubah method script menjadi seperti di bawah ini
+![alt text](<Screenshot 2024-03-15 090248.png>)
+3. Simpan kode program Langkah 2. Kemudian jalankan link pada browser
+![alt text](<Screenshot 2024-03-15 090526.png>)

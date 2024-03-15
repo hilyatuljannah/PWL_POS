@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class UserController extends Controller
 {
-    public function index()
-    {
+    public function index() {
+        $user = UserModel::all();
+        $user = UserModel::with('level')->get();
+        return view('user', ['data' => $user] );
+        
         // $data = [
         //     'level_id' => 2,
         //     'username' => 'manager_dua',
@@ -112,4 +115,5 @@ class UserController extends Controller
 
         return redirect('/user');
     }
+    
 }
