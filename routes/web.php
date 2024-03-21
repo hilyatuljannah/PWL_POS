@@ -32,3 +32,5 @@ Route ::get('/user/hapus/{id}', [UserController::class, 'hapus']);
 Route::get('/kategori', [KategoriController::class, 'index']);
 Route::get('/kategori/create', [KategoriController::class, 'create'])->name('/create');
 Route::post('/kategori', [kategoriController::class, 'store']);
+Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('/edit');
+Route::get('/kategori/update/{id}}', [KategoriController::class, 'update'])->name('/update');
