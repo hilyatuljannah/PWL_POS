@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\POSController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -35,6 +36,7 @@ Route::post('/kategori', [kategoriController::class, 'store']);
 Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('/edit');
 Route::get('/kategori/update/{id}}', [KategoriController::class, 'update'])->name('/update');
 Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('/hapus');
+Route::resource('m_user', POSController::class);
 
 
 Route::prefix('/level')->group(function () {

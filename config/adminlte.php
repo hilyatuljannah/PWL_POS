@@ -340,6 +340,11 @@ return [
             'icon' => 'fas fa-fw fa-file',
         ],
         [
+            'text' => 'Manage User',
+            'url' => 'm_user',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
