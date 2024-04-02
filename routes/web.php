@@ -35,3 +35,13 @@ Route::post('/kategori', [kategoriController::class, 'store']);
 Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('/edit');
 Route::get('/kategori/update/{id}}', [KategoriController::class, 'update'])->name('/update');
 Route::get('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('/hapus');
+
+
+Route::prefix('/level')->group(function () {
+    Route::get('/', [LevelController::class, 'index']);
+    Route::get('/create', [LevelController::class, 'create']);
+    Route::post('/', [LevelController::class, 'store']);
+    Route::get('/edit/{id}', [LevelController::class, 'edit'])->name('level.edit');
+    Route::put('/update/{id}', [LevelController::class, 'update'])->name('level.update');
+    Route::get('/delete/{id}', [LevelController::class, 'destroy'])->name('level.delete');
+});
