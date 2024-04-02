@@ -5,6 +5,15 @@
 @section('content_header_title', 'Create')
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
     <div class="container">
         <div class="card card-primary">
             <div class="card-header">
@@ -15,7 +24,12 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="kodeKategori">Kode Kategori</label>
-                        <input type="text" class="form-control" id="kodeKategori" name="KodeKategori" placeholder="Kode Kategori">
+                        <input type="text" class="@error('kodeKategori') is-invalid @enderror form-control"
+                            id="kodeKategori" name="kodeKategori" placeholder="untuk barang, contoh : AOC0">
+
+                        @error('kodeKategori')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="namaKategori">Nama Kategori</label>

@@ -4,56 +4,90 @@ namespace App\Http\Controllers;
 
 use App\DataTables\KategoriDataTable;
 use App\Models\KategoriModel;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class KategoriController extends Controller
 {
-    public function index(KategoriDataTable $dataTable)
+    public function create(): View
     {
-        return $dataTable->render('kategori.index');
+        return view('kategori.create');
     }
 
-    public function create()
-    {
-        return view ('kategori.create');
-    }
+    // public function store(Request $request): RedirectResponse
+    // {
+    //     $validated = $request->validate([
+    //         'kategori_kode' => 'required',
+    //         'kategori_nama' => 'required',
+    //     ]);
 
-    public function store (Request $request)
-    {
+    //     return redirect('/kategori');
+    // }
+    function store(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'kodeKategori' => 'bail|required|unique:posts|max:255',
+            'namaKategori' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/kategori/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
         KategoriModel::create([
             'kategori_kode' => $request->kodeKategori,
             'kategori_nama' => $request->namaKategori,
         ]);
         return redirect('/kategori');
     }
-
-    public function edit($id){
-        $data = KategoriModel::find($id);
-        if (!$data) {
-            return redirect('/kategori')->with('error', 'Kategori tidak ditemukan.');
-        }
-        return view('kategori.editkategori', ['data' => $data]);
-    }
-
-    public function update($id, Request $request)
+    public function index(KategoriDataTable $dataTable)
     {
-        $kategori= KategoriModel::find($id);
-
-        $kategori->kategori_kode = $request->kategori_kode;
-        $kategori->kategori_nama = $request->kategori_nama;
-
-        $kategori->save();
-        return redirect('/kategori');
+        return $dataTable->render('kategori.index');
     }
-    public function hapus($id){
-        $data = KategoriModel::find($id);
-        if (!$data) {
-            return redirect('/kategori')->with('error', 'Kategori tidak ditemukan.');
-        }
-        $data->delete();
-        return redirect('/kategori');
-    }
+
+    // public function create()
+    // {
+    //     return view ('kategori.create');
+    // }
+
+    // public function store (Request $request)
+    // {
+    //     KategoriModel::create([
+    //         'kategori_kode' => $request->kodeKategori,
+    //         'kategori_nama' => $request->namaKategori,
+    //     ]);
+    //     return redirect('/kategori');
+    // }
+
+    // public function edit($id){
+    //     $data = KategoriModel::find($id);
+    //     if (!$data) {
+    //         return redirect('/kategori')->with('error', 'Kategori tidak ditemukan.');
+    //     }
+    //     return view('kategori.editkategori', ['data' => $data]);
+    // }
+
+    // public function update($id, Request $request)
+    // {
+    //     $kategori= KategoriModel::find($id);
+
+    //     $kategori->kategori_kode = $request->kategori_kode;
+    //     $kategori->kategori_nama = $request->kategori_nama;
+
+    //     $kategori->save();
+    //     return redirect('/kategori');
+    // }
+    // public function hapus($id){
+    //     $data = KategoriModel::find($id);
+    //     if (!$data) {
+    //         return redirect('/kategori')->with('error', 'Kategori tidak ditemukan.');
+    //     }
+    //     $data->delete();
+    //     return redirect('/kategori');
+    // }
 
 
 
